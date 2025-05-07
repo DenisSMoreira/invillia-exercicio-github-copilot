@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error fetching activities:", error);
     }
   }
+  
   // Handle form submission
   signupForm.addEventListener("submit", async (event) => {
     event.preventDefault();
