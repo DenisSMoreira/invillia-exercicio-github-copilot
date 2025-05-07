@@ -64,7 +64,10 @@ section h3 {
   border-radius: 5px;
   background-color: #f9f9f9;
 }
-
+.participant-info {
+  font-weight: bold;
+  color: #2a9d8f;
+}
 .participant-card ul {
   margin-top: 10px;
   padding-left: 20px;
