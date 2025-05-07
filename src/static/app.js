@@ -13,24 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
       // Clear loading message
       activitiesList.innerHTML = "";
   
-      // Populate activities list
+      // Populate activities list participant
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = document.createElement("div");
-        activityCard.className = "activity-card";
+        activityCard.className = "participant-card";
   
         const spotsLeft = details.max_participants - details.participants.length;
   
         // Generate participants list
         const participantsList = details.participants.length
           ? `<ul>${details.participants.map(participant => `<li>${participant}</li>`).join("")}</ul>`
-          : "<p>No participants yet.</p>";
+          : "<p>No participant yet.</p>";
   
         activityCard.innerHTML = `
           <h4>${name}</h4>
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <p><strong>Participants:</strong></p>
+          <p><strong>Participant:</strong></p>
           ${participantsList}
         `;
   
